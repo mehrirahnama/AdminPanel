@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace admin
 {
     public class Startup
-    {
+    { 
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
