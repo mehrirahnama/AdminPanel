@@ -18,6 +18,7 @@ namespace admin
         {
             Configuration = configuration;
             //Test Branch
+            //Test 2
         }
 
         public IConfiguration Configuration { get; }
