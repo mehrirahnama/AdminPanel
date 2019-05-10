@@ -13,6 +13,15 @@ namespace AdminDashboardProject
         {
         }
 
-        DbSet<Users> Users { get; set; }
+        public DbSet<Users> Users { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
     }
+
+    
 }

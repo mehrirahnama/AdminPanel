@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using admin.Models;
 
-namespace admin.Controllers
+namespace AdminDashboardProject
 {
     public class HomeController : Controller
     {

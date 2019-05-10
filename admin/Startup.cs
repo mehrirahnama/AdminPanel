@@ -14,7 +14,9 @@ using Microsoft.Extensions.DependencyInjection;
 namespace AdminDashboardProject
 {
     public class Startup
-    { 
+    {
+
+        public AdminDBContext adminDbContext;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -38,11 +40,16 @@ namespace AdminDashboardProject
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<AdminDBContext>(item => item.UseSqlServer(Configuration.GetConnectionString("AdminConnectionString")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, AdminDBContext dbContext)
         {
+            adminDbContext = dbContext;
+            adminDbContext.Database.EnsureCreated();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
