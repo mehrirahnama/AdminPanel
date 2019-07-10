@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DataLayer.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Migrations;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace AdminDashboardProject
+namespace DataLayer.Context
 {
-    public class AdminDBContext: DbContext
+    public class AdminDBContext : DbContext
     {
         public AdminDBContext(DbContextOptions options) : base(options)
         {
@@ -22,6 +21,4 @@ namespace AdminDashboardProject
         {
         }
     }
-
-    
 }
