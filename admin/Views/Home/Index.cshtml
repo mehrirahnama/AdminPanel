@@ -1,4 +1,22 @@
-﻿<!-- BEGIN: Subheader -->
+﻿@{
+
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
+
+
+    var isAuthenticated = User.Identity.IsAuthenticated ? true : false;
+    if (isAuthenticated == false)
+    {
+        Context.Response.Redirect("Account/Login");
+    }
+
+}
+
+
+
+
+
+<!-- BEGIN: Subheader -->
 <div class="m-subheader ">
     <div class="d-flex align-items-center">
         <div class="mr-auto">

@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AdminDashboardProject.Models;
+using AdminDashboardProject.Services;
 using DataLayer.Context;
+using DataLayer.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,6 +34,32 @@ namespace AdminDashboardProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<AdminDBContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("AdminConnectionString")));
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddIdentityCore<ApplicationUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<AdminDBContext>()
+                .AddSignInManager()
+                .AddDefaultTokenProviders();
+
+
+
+            services.AddAuthentication(o =>
+            {
+                o.DefaultScheme = IdentityConstants.ApplicationScheme;
+                o.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+            })
+            .AddIdentityCookies(o => { });
+
+            services.AddTransient<IEmailSender, AuthMessageSender>();
+            services.AddTransient<ISmsSender, AuthMessageSender>();
+
+
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -41,27 +70,28 @@ namespace AdminDashboardProject
 
             //  services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<AdminDBContext>(item => item.UseSqlServer(Configuration.GetConnectionString("AdminConnectionString")));
+            //services.AddDbContext<AdminDBContext>(item => item.UseSqlServer(Configuration.GetConnectionString("AdminConnectionString")));
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                // services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<AdminDBContext>()
-                .AddDefaultTokenProviders();
+            //services.AddIdentity<IdentityUser, IdentityRole>()
+            //    // services.AddDefaultIdentity<IdentityUser>()
+            //    .AddEntityFrameworkStores<AdminDBContext>()
+            //    .AddDefaultTokenProviders();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddRazorPagesOptions(options =>
                 {
-                    options.AllowAreas = true;
-                    options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
-                    options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+                    //options.AllowAreas = true;
+                    //options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+                    //options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+                    options.Conventions.AuthorizePage("/Account/Login");
                 });
 
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.LoginPath = $"/Identity/Account/Login";
-                options.LogoutPath = $"/Identity/Account/Logout";
-                options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
-            });
+            //services.ConfigureApplicationCookie(options =>
+            //{
+            //    options.LoginPath = $"/Identity/Account/Login";
+            //    options.LogoutPath = $"/Identity/Account/Logout";
+            //    options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+            //});
 
             //services.Configure<IISOptions>(options =>
             //{
@@ -77,8 +107,30 @@ namespace AdminDashboardProject
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, AdminDBContext dbContext)
         {
-            adminDbContext = dbContext;
-            adminDbContext.Database.EnsureCreated();
+            //adminDbContext = dbContext;
+            //adminDbContext.Database.EnsureCreated();
+
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
+            //else
+            //{
+            //    app.UseExceptionHandler("/Home/Error");
+            //    app.UseHsts();
+            //}
+
+            //app.UseHttpsRedirection();
+            //app.UseStaticFiles();
+            //app.UseAuthentication();
+            //app.UseCookiePolicy();
+
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Home}/{action=Index}/{id?}");
+            //});
 
             if (env.IsDevelopment())
             {
@@ -92,9 +144,8 @@ namespace AdminDashboardProject
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseAuthentication();
             app.UseCookiePolicy();
-
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
