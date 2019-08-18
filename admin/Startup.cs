@@ -63,8 +63,13 @@ namespace AdminDashboardProject
                 options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
             });
 
+            //services.Configure<IISOptions>(options =>
+            //{
+            //    options.ForwardClientCertificate = false;
+            //});
+
             // using Microsoft.AspNetCore.Identity.UI.Services;
-           // services.AddSingleton<IEmailSender, EmailSender>();
+            // services.AddSingleton<IEmailSender, EmailSender>();
 
         }
 

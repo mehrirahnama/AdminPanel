@@ -3197,7 +3197,7 @@ select.bs-select-hidden, select.selectpicker {
     top: 50%;
     margin-left: -40px;
     margin-top: -40px;
-    background: url("../images/owl.carousel/owl.video.play.png") no-repeat;
+    background: url("images/owl.carousel/owl.video.play.png") no-repeat;
     cursor: pointer;
     z-index: 1;
     -webkit-backface-visibility: hidden;
@@ -3465,7 +3465,7 @@ select.bs-select-hidden, select.selectpicker {
 }
 
 .irs-line-mid, .irs-line-left, .irs-line-right, .irs-bar, .irs-bar-edge, .irs-slider {
-    background: url("../images/ion-rangeslider/sprite-skin-flat.png") repeat-x
+    background: url("images/ion-rangeslider/sprite-skin-flat.png") repeat-x
 }
 
 .irs {
@@ -9031,7 +9031,7 @@ button.toast-close-button {
 }
 
 .jstree-default .jstree-node, .jstree-default .jstree-icon {
-    background-image: url("../images/jstree/32px.png")
+    background-image: url("images/jstree/32px.png")
 }
 
 .jstree-default .jstree-node {
@@ -9159,15 +9159,15 @@ button.toast-close-button {
 }
 
 .jstree-default > .jstree-container-ul .jstree-loading > .jstree-ocl {
-    background: url("../images/jstree/throbber.gif") center center no-repeat
+    background: url("images/jstree/throbber.gif") center center no-repeat
 }
 
 .jstree-default .jstree-file {
-    background: url("../images/jstree/32px.png") -100px -68px no-repeat
+    background: url("images/jstree/32px.png") -100px -68px no-repeat
 }
 
 .jstree-default .jstree-folder {
-    background: url("../images/jstree/32px.png") -260px -4px no-repeat
+    background: url("images/jstree/32px.png") -260px -4px no-repeat
 }
 
 .jstree-default > .jstree-container-ul > .jstree-node {
@@ -9181,7 +9181,7 @@ button.toast-close-button {
 }
 
     #jstree-dnd.jstree-default .jstree-ok, #jstree-dnd.jstree-default .jstree-er {
-        background-image: url("../images/jstree/32px.png");
+        background-image: url("images/jstree/32px.png");
         background-repeat: no-repeat;
         background-color: transparent
     }
@@ -9256,7 +9256,7 @@ button.toast-close-button {
 }
 
 .jstree-default-small .jstree-node, .jstree-default-small .jstree-icon {
-    background-image: url("../images/jstree/32px.png")
+    background-image: url("images/jstree/32px.png")
 }
 
 .jstree-default-small .jstree-node {
@@ -9384,15 +9384,15 @@ button.toast-close-button {
 }
 
 .jstree-default-small > .jstree-container-ul .jstree-loading > .jstree-ocl {
-    background: url("../images/jstree/throbber.gif") center center no-repeat
+    background: url("images/jstree/throbber.gif") center center no-repeat
 }
 
 .jstree-default-small .jstree-file {
-    background: url("../images/jstree/32px.png") -103px -71px no-repeat
+    background: url("images/jstree/32px.png") -103px -71px no-repeat
 }
 
 .jstree-default-small .jstree-folder {
-    background: url("../images/jstree/32px.png") -263px -7px no-repeat
+    background: url("images/jstree/32px.png") -263px -7px no-repeat
 }
 
 .jstree-default-small > .jstree-container-ul > .jstree-node {
@@ -9406,7 +9406,7 @@ button.toast-close-button {
 }
 
     #jstree-dnd.jstree-default-small .jstree-ok, #jstree-dnd.jstree-default-small .jstree-er {
-        background-image: url("../images/jstree/32px.png");
+        background-image: url("images/jstree/32px.png");
         background-repeat: no-repeat;
         background-color: transparent
     }
@@ -9481,7 +9481,7 @@ button.toast-close-button {
 }
 
 .jstree-default-large .jstree-node, .jstree-default-large .jstree-icon {
-    background-image: url("../images/jstree/32px.png")
+    background-image: url("images/jstree/32px.png")
 }
 
 .jstree-default-large .jstree-node {
@@ -9609,15 +9609,15 @@ button.toast-close-button {
 }
 
 .jstree-default-large > .jstree-container-ul .jstree-loading > .jstree-ocl {
-    background: url("../images/jstree/throbber.gif") center center no-repeat
+    background: url("images/jstree/throbber.gif") center center no-repeat
 }
 
 .jstree-default-large .jstree-file {
-    background: url("../images/jstree/32px.png") -96px -64px no-repeat
+    background: url("images/jstree/32px.png") -96px -64px no-repeat
 }
 
 .jstree-default-large .jstree-folder {
-    background: url("../images/jstree/32px.png") -256px 0px no-repeat
+    background: url("images/jstree/32px.png") -256px 0px no-repeat
 }
 
 .jstree-default-large > .jstree-container-ul > .jstree-node {
@@ -9631,7 +9631,7 @@ button.toast-close-button {
 }
 
     #jstree-dnd.jstree-default-large .jstree-ok, #jstree-dnd.jstree-default-large .jstree-er {
-        background-image: url("../images/jstree/32px.png");
+        background-image: url("images/jstree/32px.png");
         background-repeat: no-repeat;
         background-color: transparent
     }
@@ -9688,13 +9688,13 @@ button.toast-close-button {
         }
 
         #jstree-dnd.jstree-dnd-responsive > .jstree-ok {
-            background-image: url("../images/jstree/40px.png");
+            background-image: url("images/jstree/40px.png");
             background-position: 0 -200px;
             background-size: 120px 240px
         }
 
         #jstree-dnd.jstree-dnd-responsive > .jstree-er {
-            background-image: url("../images/jstree/40px.png");
+            background-image: url("images/jstree/40px.png");
             background-position: -40px -200px;
             background-size: 120px 240px
         }
@@ -9709,7 +9709,7 @@ button.toast-close-button {
 
 @media (max-width: 768px) {
     .jstree-default-responsive .jstree-icon {
-        background-image: url("../images/jstree/40px.png")
+        background-image: url("images/jstree/40px.png")
     }
 
     .jstree-default-responsive .jstree-node, .jstree-default-responsive .jstree-leaf > .jstree-ocl {
@@ -9827,7 +9827,7 @@ button.toast-close-button {
     }
 
     .jstree-default-responsive .jstree-node, .jstree-default-responsive .jstree-icon, .jstree-default-responsive .jstree-node > .jstree-ocl, .jstree-default-responsive .jstree-themeicon, .jstree-default-responsive .jstree-checkbox {
-        background-image: url("../images/jstree/40px.png");
+        background-image: url("images/jstree/40px.png");
         background-size: 120px 240px
     }
 
@@ -9855,12 +9855,12 @@ button.toast-close-button {
     }
 
     .jstree-default-responsive .jstree-file {
-        background: url("../images/jstree/40px.png") 0 -160px no-repeat;
+        background: url("images/jstree/40px.png") 0 -160px no-repeat;
         background-size: 120px 240px
     }
 
     .jstree-default-responsive .jstree-folder {
-        background: url("../images/jstree/40px.png") -40px -40px no-repeat;
+        background: url("images/jstree/40px.png") -40px -40px no-repeat;
         background-size: 120px 240px
     }
 
@@ -21692,18 +21692,10 @@ body.swal2-no-backdrop .swal2-shown {
 }
 
 
-/*@font-face {
+@font-face {
     font-family: "BYekan";
     font-style: normal;
     font-weight: 600;
     src: url("fonts/yekan/BYekan.eot");
     src: url("fonts/yekan/BYekan.eot?#iefix") format("embedded-opentype"),url("fonts/yekan/BYekan.woff") format("woff"),url("fonts/yekan/BYekan.ttf") format("truetype")
-}*/
-
-
-@font-face {
-    font-family: 'BYekan';
-    src: url('fonts/yekan/BYekan.eot?#') format('eot'), /* IE6–8 */
-    url('fonts/yekan/BYekan.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('fonts/yekan/BYekan.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
 }
